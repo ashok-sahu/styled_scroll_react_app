@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { Navbar, Sidebar ,Hero} from "../../components/index";
+import { Navbar, Sidebar, Hero, InfoSec } from "../../components/index";
+import {homeObjOne} from '../../components/InfoSection/data'
 
 const Homepage = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -8,9 +9,10 @@ const Homepage = () => {
   };
   return (
     <>
-      <Sidebar isOpen={isOpen} toggle={toggle}/>
-      <Navbar toggle={toggle}/>
-      <Hero/>
+      <Sidebar isOpen={isOpen} toggle={toggle} />
+      <Navbar toggle={toggle} />
+      <Hero />
+      <InfoSec {...homeObjOne}/>
     </>
   );
 };
